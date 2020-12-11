@@ -8,7 +8,7 @@ use leruge\command\Register;
 use leruge\command\SocketStart;
 use think\Service;
 
-class AuthService extends Service
+class GatewayService extends Service
 {
     public function boot()
     {
