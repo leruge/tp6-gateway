@@ -37,7 +37,7 @@ class SocketStart extends Command
         global $argv;
         array_shift($argv);
         array_shift($argv);
-        array_unshift($argv, ['think', $action]);
+        array_unshift($argv, ...['think', $action]);
 
         // 命令提示
         if ($action == 'start') {
