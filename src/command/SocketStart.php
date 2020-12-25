@@ -89,9 +89,14 @@ class SocketStart extends Command
             config('gateway.gateway_address') : 'websocket://0.0.0.0:8282';
         $content = [];
         if (config('gateway.ssl.is_use')) {
-            $content = config('gateway.ssl.debug');
+            $content = [
+                'ssl' => config('gateway.ssl')
+            ];
         }
         $gateway = new Gateway($gatewayAddress, $content);
+        if (config('gateway.ssl.is_use')) {
+            $gateway->transport = 'ssl';
+        }
         $gateway->name = !empty(config('gateway.gateway_name')) ?
             config('gateway.gateway_name') : 'gateway';
         $gateway->count = !empty(config('gateway.gateway_count')) ?
