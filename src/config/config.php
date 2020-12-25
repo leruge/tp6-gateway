@@ -14,4 +14,13 @@ return [
     'gateway_start_port' => 2000,
     'gateway_ping_interval' => 55,
     'daemonize' => false,
+
+    // ssl证书配置
+    'ssl' => [
+        'is_use' => true, // 是否使用ssl
+        'local_cert' => '', // 证书路径
+        'local_pk' => '', // 私钥路径
+        'verify_peer' => false,
+        'allow_self_signed' => false, // 是否自签证书
+    ],
 ];
