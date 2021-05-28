@@ -8,7 +8,7 @@ class Events
     public static function onConnect($client_id)
     {
         $resData = [
-            'type' => 1,
+            'type' => 11,
             'client_id' => $client_id
         ];
         \GatewayWorker\Lib\Gateway::sendToClient($client_id, json_encode($resData));
