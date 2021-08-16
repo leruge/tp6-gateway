@@ -16,7 +16,7 @@ class SocketStart extends Command
 {
     protected function configure()
     {
-        $this->setName('socket_start')
+        $this->setName('socket')
             ->addArgument('action', Argument::OPTIONAL, "start|stop|restart|reload|status|connections", 'start')
             ->setDescription('GatewayWorker Server for ThinkPHP');
     }
@@ -68,7 +68,8 @@ class SocketStart extends Command
     // register注册
     private function register($registerAddress)
     {
-        new \GatewayWorker\Register('text://' . $registerAddress);
+        $register = new \GatewayWorker\Register('text://' . $registerAddress);
+        $register->name = config('gateway.register_name') ?: 'register';
     }
 
     // business启动

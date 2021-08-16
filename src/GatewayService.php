@@ -16,7 +16,7 @@ class GatewayService extends Service
             'business' => Business::class,
             'gateway' => Gateway::class,
             'register' => Register::class,
-            'socket_start' => SocketStart::class
+            'socket' => SocketStart::class
         ]);
     }
 }

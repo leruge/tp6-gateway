@@ -25,7 +25,8 @@ class Register extends Command
         $output->writeln('register启动');
         $registerAddress = empty(config('gateway.register_address')) ? '127.0.0.1:1236' :
             config('gateway.register_address');
-        new \GatewayWorker\Register('text://' . $registerAddress);
+        $register = new \GatewayWorker\Register('text://' . $registerAddress);
+        $register->name = config('gateway.register_name') ?: 'register';
         Worker::runAll();
     }
 }

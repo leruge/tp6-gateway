@@ -10,4 +10,8 @@
     1. `php think business`
     1. `php think gateway`
 1. linux下启动一条即可
-    1. `php think socket_start`，'start', 'stop', 'reload', 'restart', 'status', 'connections'，跟gatewayworker命令一样
+    1. `php think socket`，'start', 'stop', 'reload', 'restart', 'status', 'connections'，跟gatewayworker命令一样
+
+## 版本更新内容
+1. 自定义register进程名称
+1. linux下启动命令修改为socket
