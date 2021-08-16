@@ -13,5 +13,6 @@
     1. `php think socket`，'start', 'stop', 'reload', 'restart', 'status', 'connections'，跟gatewayworker命令一样
 
 ## 版本更新内容
+> 1.0.7
 1. 自定义register进程名称
 1. linux下启动命令修改为socket
