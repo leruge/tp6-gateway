@@ -5,7 +5,7 @@ namespace leruge;
 use leruge\command\Business;
 use leruge\command\Gateway;
 use leruge\command\Register;
-use leruge\command\SocketStart;
+use leruge\command\Socket;
 use think\Service;
 
 class GatewayService extends Service
@@ -16,7 +16,7 @@ class GatewayService extends Service
             'business' => Business::class,
             'gateway' => Gateway::class,
             'register' => Register::class,
-            'socket' => SocketStart::class
+            'socket' => Socket::class
         ]);
     }
 }

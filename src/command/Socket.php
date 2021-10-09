@@ -12,7 +12,7 @@ use think\console\input\Option;
 use think\console\Output;
 use Workerman\Worker;
 
-class SocketStart extends Command
+class Socket extends Command
 {
     protected function configure()
     {
